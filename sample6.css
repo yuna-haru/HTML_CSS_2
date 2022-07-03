@@ -13,7 +13,6 @@ main {
   width: 960px;
   margin: 50px auto;
   display: flex;
-  flex: inline-block;
 }
 
 .step {
@@ -60,4 +59,19 @@ footer {
   background-color: #aaa;
 
   height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+
+  main {
+    width: 100%;
+    display: block;
+  }
+  .box {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .box:last-child {
+    margin: 0 auto;
+  }
 }
