@@ -30,3 +30,27 @@ main {
 .link-text {
   color: gray;
 }
+
+@media screen and (max-width: 768px) {
+
+  header {
+    width: 100%;
+    background-size: 900px;
+  }
+  .heading-text {
+    padding: 50% 20%;
+  }
+  main {
+    width: 100%;
+  }
+  p {
+    margin: 0 3%;
+  }
+  a {
+    margin-left: 3%;
+  }
+  .box:last-child {
+    border: none;
+  }
+
+}
