@@ -100,3 +100,16 @@ footer {
   background-color: lightgray;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+
+  ul {
+    height: 40%;
+    border-top: none;
+    border-bottom: none;
+  }
+  .list {
+    display: block;
+  }
+
+}
