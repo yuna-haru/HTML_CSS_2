@@ -103,13 +103,82 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+  a {
+    color: gray;
+  }
   ul {
-    height: 40%;
+    height: 30%;
     border-top: none;
     border-bottom: none;
+    line-height: 30px;
+    
   }
   .list {
     display: block;
   }
+  .box {
+    width: 100%;
+    margin: 40px auto;
+  }
+  .box1{
+    width: 25%;
+    background-color: #e6ffe9;
+  }
+  .box2{
+    width: 25%;
+
+    background-color: #cbffd3;
+  }
+  .box3 {
+    width: 25%;
+
+    background-color: #aeffbd;
+  }
+  .box4 {
+    width: 25%;
+   
+    background-color: #93ffab;
+  }
+  .box5 {
+    width: 25%;
+
+    background-color: #f3ffd8;
+  }
+  .box6 {
+    width: 25%;
+
+    background-color: #edffbe;
+  }
+  .box7 {
+    width: 25%;
+
+    background-color: #e9ffa5;
+  }
+  .box8 {
+    width: 25%;
+
+    background-color: #e4ff8d;
+  }
+  .box9 {
+    width: 25%;
+ 
+    background-color: #d9e5ff;
+  }
+  .box10 {
+    width: 25%;
+  
+    background-color: #bad3ff;
+  }
+  .box11 {
+    width: 25%;
+
+    background-color: #a4c6ff;
+  }
+  .box12 {
+    width: 25%;
+
+    background-color: #8eb8ff;
+  }
+
 
 }
