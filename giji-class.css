@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 60px;
+  background-color: aqua;
+}
+.box:nth-child(3n) {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 30%;
+    height: 110px;
+    margin: 10% auto;
+  }
+  .box:nth-child(odd) {
+    margin: 10% 0 10% 10%;
+  }
+  .box:nth-child(3n) {
+    background-color: aqua;
+  }
+  .box.box:nth-child(2n) {
+    background-color: lawngreen;
+  }
+}
