@@ -7,6 +7,7 @@
 .flex {
   display: flex;
   background-color: #00c7ce;
+  margin-bottom: 50px;
 }
 .flex > div {
   width: 33%;
@@ -23,4 +24,19 @@
   padding: 20px;
   color: #fff;
   background-color: #00c7ce;
+  margin-bottom: 50px;
+}
+.flex-2 {
+  background-color: #00c7ce;
+  height: 35vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-2 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
 }
