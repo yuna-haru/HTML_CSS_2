@@ -61,3 +61,100 @@
   line-height: 50px;
   border-radius: 10px
 }
+
+.order {
+  background-color: #00c7ce;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+}
+.order > div {
+  background-color: #fff;
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+.order > div:nth-child(1) {
+  order: 4;
+}
+.order > div:nth-child(2) {
+  order: 1;
+}
+.order > div:nth-child(3) {
+  order: 2;
+}
+.order >div:nth-child(4) {
+  order: 3;
+}
+
+.grow {
+  background-color: #00c7ce;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+.grow > div {
+  background-color: #fff;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 10px;
+}
+.grow > div:nth-child(1) {
+  flex-grow: 0;
+}
+.grow > div:nth-child(2) {
+  flex-grow: 3;
+}
+.grow > div:nth-child(3) {
+  flex-grow: 2;
+}
+.grow > div:nth-child(4) {
+  flex-grow: 4;
+}
+
+.shrink {
+  width: 800px;
+  background-color: #00c7ce;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.shrink > div {
+  width: 300px;
+  height: 50px;
+  background-color: #fff;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+}
+.shrink > div :nth-child(1) {
+  flex-shrink: 0;
+}
+.shrink > div:nth-child(2) {
+  flex-shrink: 1;
+}
+.shrink > div:nth-child(3) {
+  flex-shrink: 2;
+}
+.shrink > div:nth-child(4) {
+  flex-shrink: 4;
+}
+
+.basis {
+  background-color: #00c7ce;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+}
+.basis > div {
+  background-color: #fff;
+  height: 50px;
+  flex-basis: 100px;
+}
