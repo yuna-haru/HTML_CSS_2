@@ -1,0 +1,110 @@
+<h1>Flexレイアウト</h1>
+
+<p>レイアウトに柔軟性があるなど、旧レイアウトの欠点を解消し、利点が多い。<br>
+HTMLにて、</p>
+
+<p>
+  ＜div class="flex"＞<br>
+    ＜div＞1＜/div＞<br>
+    ＜div＞2＜/div＞<br>
+    ＜div＞3＜/div＞<br>
+    ＜div＞4＜/div＞<br>
+  ＜/div＞<br>
+
+と記載、次にCSSにて</p>
+
+<P>
+  .flex {
+    background-color: #00c7ce;
+    height: 50vh;
+    padding: 10px;
+    display: flex;
+  }<br>
+  .flex > div {
+    background-color: #fff;
+    margin: 5px;
+    font-size: 30px;
+  }<br>
+  と記載する。
+</P>
+
+<h4>Flexコンテナ―</h4>
+<p>Flexレイアウトを行うための親の箱です。<br>
+上記の .flex にdisplay:flexと設定することでFlexコンテナーになる<br>
+Flexコンテナーは並ぶ方向(横・縦) / 横方向の整列方法 / 縦方向の整列方法 / 折り返し方法<br>
+等を同時に設定できる</p>
+
+<h4>Flexアイテム</h4>
+<p>Flexコンテナー内に直接入っている要素は全て(※)自動的にFlexアイテムとなります。<br>
+  Flexアイテムとなった要素は更に 並び順 / 伸縮比率 / 個別の縦位置など<br>
+  簡単に設定することができます。<br>
+  ※Flexアイテム内に更にdivが含まれるなど、入れ子になっているアイテムはFlexアイテムとはなりません</p>
+
+
+  <h3>Flexコンテナーで指定できるプロパティ</h3>
+  <p>・flex-direction<br>
+  縦並び、横並びの指定ができる。<br>
+rowが横並び、columnが縦並びになる。<br>
+rowやcolumnのうしろに-reverseを記述すると並び順が逆になる</p>
+<p>・flex-wrap<br>
+  折り返しの指定ができる。<br>
+no-wrapは初期値、wrapは左上から折り返す、wrap-reverseは左下から折り返す。</p>
+<p>・flex-direction: row;<br>
+  flex-directionとflex-wrapをまとめて記載(※以下、例)<br>
+  .flex {
+    display: flex;
+    flex-flow: row wrap;
+  }<br></p>
+  <p>・justify-content<br>
+    Flexコンテナーの内容の横方向の整列方法の指定<br>
+  flex-startは左寄せ、flex-endは右寄せ、centerは真ん中<br>
+  space-betweeenは各アイテムを均等に配置し最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる<br>
+  space-aroundは各アイテムを均等に配置し各アイテムの両側に半分の大きさの間隔を置く<br>
+  space-evenlyは各アイテムを均等に配置し各アイテムの周りに同じ大きさの間隔を置く<br>
+  stretchは各アイテムを均等に配置しサイズが 'auto' であるアイテムは、コンテナーに合わせて引き伸ばす<br></p>
+  <p>・align-items<br>
+    縦方向の整列方法の指定<br>
+    stretchは初期値、flex-startはflexアイテムを先頭寄せ、flex-endはflexアイテムを末尾寄せ。<br>
+    centerはアイテムの中央寄せ、baselineはアイテムの内容を揃える。</p>
+    <p>・align-content<br>
+      Flexコンテナーの内容が複数行になった際の整列方法<br>
+      内容はjustify-contentと同じ。</p>
+
+
+<h3>Flexアイテムで指定できるプロパティ</h3>
+<p>・order<br>
+  Flexアイテムの順序の指定。<br>
+いちいち入れ替えなくとも疑似クラス(nth-child(n))を使って順序が変えられる</p>
+<p>・flex-grow<br>
+  Flexアイテムの横幅の伸びる比率の指定<br>
+疑似クラスで0から1、2、3……と伸びる長さを変えられる</p>
+<p>・flex-shrink<br>
+  Flexアイテムの横幅の縮む比率の指定。<br>
+疑似クラスで0から1、2、3……と縮む大きさを変えられる</p>
+<p>・flex-basis<br>
+  Flexアイテムの横幅の指定。<br>
+widthでも問題ないが、<br>
+widthとの大きな違いは、親の箱（Flexコンテナー）のflex-directionが縦並び（columnまたはcolumn-reverse)<br>
+であれば自動で高さの設定に切り替わるという点です</p>
+
+<h3>Flex</h3>
+<p>flex-grow, flex-shrink, flex-basis をまとめて指定できます。<br>
+  値の指定方法や個数によって表示のされ方が変わるため、注意が必要です。<br>
+  .flex > div {<br>
+    ・単位がない数値を1つ指定 → flex-growに<br>
+    flex: 2;<br>
+    ・単位のある数値を1つ指定 → flex-basisに<br>
+    flex: 10em;<br>
+    flex: 30%;<br>
+    ・単位がない数値を2つ指定 → flex-grow | flex-shrink に<br>
+    flex: 2 2;<br>
+    ・値を3つ指定する → 必ず flex-grow | flex-shrink | flex-basis に<br>
+    flex: 2 2 10%;<br>
+  }</p>
+  <p>・align-self<br>
+    Flexアイテムの縦方向の位置を、アイテムごとに個別に指定<br>
+    flex-startはflexアイテムを起点に配置(一番上を起点)<br>
+    flex-endはflexアイテムの末尾を起点に配置(一番下を起点)<br>
+    centerはflexアイテムの中央に配置<br>
+    stretchは寸法が 'auto' のアイテムをコンテナーに合うよう伸長<br>
+  </p>
